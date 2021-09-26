@@ -6,6 +6,13 @@ import java.util.List;
 public class GameManager {
 
     private List<Game> games = new ArrayList<>();
+    private int numGames;
+
+    public GameManager() {
+
+        this.numGames = 0;
+
+    }
 
     public void addGame(Game g){
 
@@ -13,4 +20,13 @@ public class GameManager {
 
     }
 
+    public int getNumGames() {
+        return numGames;
+    }
+
+    public List<Game> gameList(){
+
+        return games;
+
+    }
 }
