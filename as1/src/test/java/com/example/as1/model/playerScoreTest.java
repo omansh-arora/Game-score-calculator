@@ -11,8 +11,8 @@ class playerScoreTest {
     @Test
     void getuScoreTest() {
 
-        int score = playerScore.getuScore(4,1,15);
-        assertEquals(-10,score);
+        int score = playerScore.getuScore(5,2,40);
+        assertEquals(60,score);
 
     }
 

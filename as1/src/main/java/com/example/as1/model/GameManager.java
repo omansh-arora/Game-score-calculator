@@ -17,6 +17,14 @@ public class GameManager {
     public void addGame(Game g){
 
         games.add(g);
+        numGames++;
+
+    }
+
+    public void remGame(int n){
+
+        games.remove(n-1);
+        numGames--;
 
     }
 

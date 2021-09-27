@@ -1,18 +1,24 @@
 package com.example.as1.model;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import java.util.ArrayList;
 
 public class Game {
 
-    private ArrayList<Integer> scores = new ArrayList<>();
+    private ArrayList<Integer> scores;
     private ArrayList<Integer> winners = new ArrayList<>();
 
-    LocalDateTime stamp;
+    String stamp;
 
-    public Game(ArrayList<Integer> scores) {
-        this.scores = scores;
-        stamp = LocalDateTime.now();
+    public Game(ArrayList<Integer> score) {
+        scores = score;
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        stamp = now.format(formatter);
+
+
         int max = scores.get(0);
         for (int i = 1; i < scores.size(); i++) {
 
@@ -33,7 +39,7 @@ public class Game {
         String str = "";
         for (int i = 0; i < scores.size()-1;i++){
 
-            str += i;
+            str += scores.get(i);
             str += " vs ";
 
         }
@@ -47,7 +53,7 @@ public class Game {
                 str += ", ";
             }
         }
-        str += stamp;
+        str += " (@" + stamp + ")";
 
         return str;
 
