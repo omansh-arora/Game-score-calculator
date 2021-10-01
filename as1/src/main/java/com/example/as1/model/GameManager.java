@@ -8,6 +8,7 @@ public class GameManager {
     private List<Game> games = new ArrayList<>();
     private int numGames;
 
+
     public GameManager() {
 
         this.numGames = 0;

@@ -2,9 +2,6 @@ package com.example.as1.model;
 
 public class playerScore {
 
-    private int numCards;
-    private int numWagers;
-    private int sumPointCards;
 
     private static int uScore;
 
